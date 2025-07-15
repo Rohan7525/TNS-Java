@@ -1,28 +1,59 @@
-package com.singleLvlInheritance;
+package com.SingleLvlInheritance;
 
-public class Citizen extends Person{
-	private String nationality;
-
+public class Citizen {
+	
+	private String name;
+	private long aadharno;
+	private String address;
+	private long phno;
+	
 	public Citizen() {
-		super();
+	System.out.println("Citizen object created");
 	}
 
-	public Citizen(int age, String name, String nationality) {
-		super(age, name);
-		this.nationality = nationality;
+	public Citizen(String name, long aadharno, String address, long phno) {
+		
+		this.name = name;
+		this.aadharno = aadharno;
+		this.address = address;
+		this.phno = phno;
+	}
+	
+	public String getName() {
+		return name;
 	}
 
-	public String getNationality() {
-		return nationality;
+	public void setName(String name) {
+		this.name = name;
 	}
 
-	public void setNationality(String nationality) {
-		this.nationality = nationality;
+	public long getAadharno() {
+		return aadharno;
+	}
+
+	public void setAadharno(long aadharno) {
+		this.aadharno = aadharno;
+	}
+
+	public String getAddress() {
+		return address;
+	}
+
+	public void setAddress(String address) {
+		this.address = address;
+	}
+
+	public long getPhno() {
+		return phno;
+	}
+
+	public void setPhno(long phno) {
+		this.phno = phno;
 	}
 
 	@Override
 	public String toString() {
-		return "Citizen [nationality=" + nationality + ", toString()=" + super.toString() + "]";
+		return "Citizen [name=" + name + ", aadharno=" + aadharno + ", address=" + address + ", phno=" + phno + "]";
 	}
-	
+
 }
